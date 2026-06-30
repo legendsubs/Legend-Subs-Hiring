@@ -28,7 +28,6 @@
     line-height: 1.6;
   }
 
-  /* NAV */
   nav {
     position: sticky;
     top: 0;
@@ -42,655 +41,175 @@
     box-shadow: 0 2px 12px rgba(0,0,0,0.2);
   }
 
-  .nav-logo {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    text-decoration: none;
-  }
+  .nav-logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
 
   .nav-logo-badge {
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    background: var(--red);
-    border: 3px solid white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 800;
-    font-size: 13px;
-    color: white;
-    letter-spacing: -0.5px;
-    line-height: 1.1;
-    text-align: center;
+    width: 44px; height: 44px; border-radius: 50%;
+    background: var(--red); border: 3px solid white;
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 800; font-size: 13px; color: white;
+    letter-spacing: -0.5px; line-height: 1.1; text-align: center;
   }
 
-  .nav-brand {
-    color: white;
-    font-size: 15px;
-    font-weight: 600;
-  }
+  .nav-brand { color: white; font-size: 15px; font-weight: 600; }
+  .nav-brand span { color: var(--gold); display: block; font-size: 11px; font-weight: 400; letter-spacing: 1px; text-transform: uppercase; }
 
-  .nav-brand span {
-    color: var(--gold);
-    display: block;
-    font-size: 11px;
-    font-weight: 400;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-  }
-
-  .nav-links {
-    display: flex;
-    gap: 6px;
-    list-style: none;
-  }
-
-  .nav-links a {
-    color: rgba(255,255,255,0.8);
-    text-decoration: none;
-    font-size: 13px;
-    font-weight: 500;
-    padding: 6px 14px;
-    border-radius: 20px;
-    transition: all 0.2s;
-  }
-
+  .nav-links { display: flex; gap: 6px; list-style: none; }
+  .nav-links a { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 13px; font-weight: 500; padding: 6px 14px; border-radius: 20px; transition: all 0.2s; }
   .nav-links a:hover { background: rgba(255,255,255,0.12); color: white; }
-
-  .nav-cta {
-    background: var(--red) !important;
-    color: white !important;
-    font-weight: 600 !important;
-  }
-
+  .nav-cta { background: var(--red) !important; color: white !important; font-weight: 600 !important; }
   .nav-cta:hover { background: var(--red-dark) !important; }
 
-  /* HERO */
-  .hero {
-    background: var(--navy);
-    padding: 90px 5% 80px;
-    position: relative;
-    overflow: hidden;
-    min-height: 520px;
-    display: flex;
-    align-items: center;
-  }
+  .hero { background: var(--navy); padding: 90px 5% 80px; position: relative; overflow: hidden; min-height: 520px; display: flex; align-items: center; }
+  .hero::before { content: ''; position: absolute; top: -60px; right: -60px; width: 420px; height: 420px; border-radius: 50%; background: rgba(192,39,45,0.12); }
+  .hero::after { content: ''; position: absolute; bottom: -80px; left: 30%; width: 300px; height: 300px; border-radius: 50%; background: rgba(232,160,32,0.07); }
 
-  .hero::before {
-    content: '';
-    position: absolute;
-    top: -60px; right: -60px;
-    width: 420px; height: 420px;
-    border-radius: 50%;
-    background: rgba(192,39,45,0.12);
-  }
+  .hero-inner { max-width: 1100px; margin: 0 auto; width: 100%; position: relative; z-index: 2; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
 
-  .hero::after {
-    content: '';
-    position: absolute;
-    bottom: -80px; left: 30%;
-    width: 300px; height: 300px;
-    border-radius: 50%;
-    background: rgba(232,160,32,0.07);
-  }
+  .hero-eyebrow { display: inline-block; background: var(--red); color: white; font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; padding: 5px 14px; border-radius: 3px; margin-bottom: 20px; }
 
-  .hero-inner {
-    max-width: 1100px;
-    margin: 0 auto;
-    width: 100%;
-    position: relative;
-    z-index: 2;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 60px;
-    align-items: center;
-  }
+  .hero h1 { font-size: clamp(36px, 5vw, 58px); font-weight: 800; color: white; line-height: 1.1; margin-bottom: 20px; }
+  .hero h1 em { font-style: normal; color: var(--gold); }
+  .hero p { color: rgba(255,255,255,0.75); font-size: 17px; line-height: 1.7; margin-bottom: 32px; max-width: 460px; }
 
-  .hero-eyebrow {
-    display: inline-block;
-    background: var(--red);
-    color: white;
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    padding: 5px 14px;
-    border-radius: 3px;
-    margin-bottom: 20px;
-  }
+  .hero-btns { display: flex; gap: 12px; flex-wrap: wrap; }
 
-  .hero h1 {
-    font-size: clamp(36px, 5vw, 58px);
-    font-weight: 800;
-    color: white;
-    line-height: 1.1;
-    margin-bottom: 20px;
-  }
-
-  .hero h1 em {
-    font-style: normal;
-    color: var(--gold);
-  }
-
-  .hero p {
-    color: rgba(255,255,255,0.75);
-    font-size: 17px;
-    line-height: 1.7;
-    margin-bottom: 32px;
-    max-width: 460px;
-  }
-
-  .hero-btns {
-    display: flex;
-    gap: 12px;
-    flex-wrap: wrap;
-  }
-
-  .btn-primary {
-    display: inline-block;
-    background: var(--red);
-    color: white;
-    padding: 14px 28px;
-    border-radius: 6px;
-    font-weight: 700;
-    font-size: 15px;
-    text-decoration: none;
-    transition: background 0.2s, transform 0.1s;
-  }
-
+  .btn-primary { display: inline-block; background: var(--red); color: white; padding: 14px 28px; border-radius: 6px; font-weight: 700; font-size: 15px; text-decoration: none; transition: background 0.2s, transform 0.1s; }
   .btn-primary:hover { background: var(--red-dark); transform: translateY(-1px); }
 
-  .btn-secondary {
-    display: inline-block;
-    border: 2px solid rgba(255,255,255,0.4);
-    color: white;
-    padding: 14px 28px;
-    border-radius: 6px;
-    font-weight: 600;
-    font-size: 15px;
-    text-decoration: none;
-    transition: border-color 0.2s, background 0.2s;
-  }
+  .hero-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .hero-stat { background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); border-radius: 10px; padding: 20px; text-align: center; }
+  .hero-stat .num { font-size: 32px; font-weight: 800; color: var(--gold); display: block; }
+  .hero-stat .label { font-size: 12px; color: rgba(255,255,255,0.65); text-transform: uppercase; letter-spacing: 0.5px; margin-top: 4px; }
 
-  .btn-secondary:hover { border-color: white; background: rgba(255,255,255,0.08); }
+  section { padding: 80px 5%; }
+  .section-inner { max-width: 1100px; margin: 0 auto; }
+  .section-eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--red); margin-bottom: 10px; }
+  .section-title { font-size: clamp(28px, 4vw, 40px); font-weight: 800; color: var(--navy); margin-bottom: 16px; line-height: 1.2; }
+  .section-lead { font-size: 17px; color: var(--text-muted); max-width: 620px; line-height: 1.7; margin-bottom: 50px; }
 
-  .hero-stats {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-  }
+  .who { background: var(--cream); }
+  .who-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; }
+  .who-text p { font-size: 16px; color: var(--text-muted); line-height: 1.8; margin-bottom: 18px; }
+  .who-text p strong { color: var(--navy); }
 
-  .hero-stat {
-    background: rgba(255,255,255,0.08);
-    border: 1px solid rgba(255,255,255,0.15);
-    border-radius: 10px;
-    padding: 20px;
-    text-align: center;
-  }
+  .locations-bar { margin-top: 30px; padding: 20px 24px; background: var(--navy); border-radius: 10px; color: white; }
+  .locations-bar .lbl { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 10px; }
+  .location-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+  .location-chip { background: rgba(255,255,255,0.12); color: white; font-size: 13px; padding: 5px 12px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.2); }
 
-  .hero-stat .num {
-    font-size: 32px;
-    font-weight: 800;
-    color: var(--gold);
-    display: block;
-  }
-
-  .hero-stat .label {
-    font-size: 12px;
-    color: rgba(255,255,255,0.65);
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    margin-top: 4px;
-  }
-
-  /* SECTIONS */
-  section {
-    padding: 80px 5%;
-  }
-
-  .section-inner {
-    max-width: 1100px;
-    margin: 0 auto;
-  }
-
-  .section-eyebrow {
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: var(--red);
-    margin-bottom: 10px;
-  }
-
-  .section-title {
-    font-size: clamp(28px, 4vw, 40px);
-    font-weight: 800;
-    color: var(--navy);
-    margin-bottom: 16px;
-    line-height: 1.2;
-  }
-
-  .section-lead {
-    font-size: 17px;
-    color: var(--text-muted);
-    max-width: 620px;
-    line-height: 1.7;
-    margin-bottom: 50px;
-  }
-
-  /* WHO WE ARE */
-  .who {
-    background: var(--cream);
-  }
-
-  .who-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 60px;
-    align-items: start;
-  }
-
-  .who-text p {
-    font-size: 16px;
-    color: var(--text-muted);
-    line-height: 1.8;
-    margin-bottom: 18px;
-  }
-
-  .who-text p strong {
-    color: var(--navy);
-  }
-
-  .locations-bar {
-    margin-top: 30px;
-    padding: 20px 24px;
-    background: var(--navy);
-    border-radius: 10px;
-    color: white;
-  }
-
-  .locations-bar .lbl {
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    color: var(--gold);
-    margin-bottom: 10px;
-  }
-
-  .location-chips {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-  }
-
-  .location-chip {
-    background: rgba(255,255,255,0.12);
-    color: white;
-    font-size: 13px;
-    padding: 5px 12px;
-    border-radius: 20px;
-    border: 1px solid rgba(255,255,255,0.2);
-  }
-
-  /* VALUES */
-  .values-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-  }
-
-  .value-card {
-    background: white;
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 28px 24px;
-    border-top: 4px solid var(--red);
-    transition: transform 0.2s, box-shadow 0.2s;
-  }
-
+  .values-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
+  .value-card { background: white; border: 1px solid var(--border); border-radius: 12px; padding: 28px 24px; border-top: 4px solid var(--red); transition: transform 0.2s, box-shadow 0.2s; }
   .value-card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(0,0,0,0.08); }
+  .value-icon { width: 44px; height: 44px; border-radius: 10px; background: #FFF0F0; display: flex; align-items: center; justify-content: center; margin-bottom: 16px; font-size: 22px; }
+  .value-card h3 { font-size: 16px; font-weight: 700; color: var(--navy); margin-bottom: 8px; }
+  .value-card p { font-size: 14px; color: var(--text-muted); line-height: 1.6; }
 
-  .value-icon {
-    width: 44px;
-    height: 44px;
-    border-radius: 10px;
-    background: #FFF0F0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 16px;
-    font-size: 22px;
-  }
-
-  .value-card h3 {
-    font-size: 16px;
-    font-weight: 700;
-    color: var(--navy);
-    margin-bottom: 8px;
-  }
-
-  .value-card p {
-    font-size: 14px;
-    color: var(--text-muted);
-    line-height: 1.6;
-  }
-
-  /* BENEFITS */
-  .benefits {
-    background: var(--cream);
-  }
-
-  .benefits-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 20px;
-  }
-
-  .benefit-card {
-    background: white;
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 26px;
-    display: flex;
-    gap: 16px;
-    align-items: flex-start;
-    transition: transform 0.2s;
-  }
-
+  .benefits { background: var(--cream); }
+  .benefits-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
+  .benefit-card { background: white; border: 1px solid var(--border); border-radius: 12px; padding: 26px; display: flex; gap: 16px; align-items: flex-start; transition: transform 0.2s; }
   .benefit-card:hover { transform: translateY(-2px); }
+  .benefit-icon { width: 48px; height: 48px; border-radius: 10px; background: var(--navy); display: flex; align-items: center; justify-content: center; font-size: 22px; flex-shrink: 0; }
+  .benefit-card h3 { font-size: 15px; font-weight: 700; color: var(--navy); margin-bottom: 6px; }
+  .benefit-card p { font-size: 13px; color: var(--text-muted); line-height: 1.6; }
 
-  .benefit-icon {
-    width: 48px;
-    height: 48px;
-    border-radius: 10px;
-    background: var(--navy);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 22px;
-    flex-shrink: 0;
-  }
-
-  .benefit-card h3 {
-    font-size: 15px;
-    font-weight: 700;
-    color: var(--navy);
-    margin-bottom: 6px;
-  }
-
-  .benefit-card p {
-    font-size: 13px;
-    color: var(--text-muted);
-    line-height: 1.6;
-  }
-
-  /* BONUSES */
-  .bonuses-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 24px;
-  }
-
-  .bonus-card {
-    border-radius: 14px;
-    padding: 30px;
-    position: relative;
-    overflow: hidden;
-  }
-
+  .bonuses-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
+  .bonus-card { border-radius: 14px; padding: 30px; position: relative; overflow: hidden; }
   .bonus-card.training { background: #EEF2FF; border: 1px solid #C7D2FE; }
   .bonus-card.quarterly { background: #FFF7ED; border: 1px solid #FED7AA; }
   .bonus-card.elite { background: #FEF2F2; border: 1px solid #FECACA; }
   .bonus-card.legend { background: #F0FDF4; border: 1px solid #BBF7D0; }
-
-  .bonus-amount {
-    font-size: 42px;
-    font-weight: 800;
-    line-height: 1;
-    margin-bottom: 6px;
-  }
-
+  .bonus-amount { font-size: 42px; font-weight: 800; line-height: 1; margin-bottom: 6px; }
   .bonus-card.training .bonus-amount { color: #4338CA; }
   .bonus-card.quarterly .bonus-amount { color: #C2410C; }
   .bonus-card.elite .bonus-amount { color: var(--red); }
   .bonus-card.legend .bonus-amount { color: #15803D; }
-
-  .bonus-card h3 {
-    font-size: 16px;
-    font-weight: 700;
-    color: var(--navy);
-    margin-bottom: 10px;
-  }
-
-  .bonus-card p {
-    font-size: 14px;
-    color: var(--text-muted);
-    line-height: 1.6;
-  }
-
-  .bonus-tag {
-    display: inline-block;
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    padding: 3px 10px;
-    border-radius: 20px;
-    margin-bottom: 14px;
-  }
-
+  .bonus-card h3 { font-size: 16px; font-weight: 700; color: var(--navy); margin-bottom: 10px; }
+  .bonus-card p { font-size: 14px; color: var(--text-muted); line-height: 1.6; }
+  .bonus-tag { display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; padding: 3px 10px; border-radius: 20px; margin-bottom: 14px; }
   .bonus-card.training .bonus-tag { background: #C7D2FE; color: #3730A3; }
   .bonus-card.quarterly .bonus-tag { background: #FED7AA; color: #92400E; }
   .bonus-card.elite .bonus-tag { background: #FECACA; color: #991B1B; }
   .bonus-card.legend .bonus-tag { background: #BBF7D0; color: #166534; }
 
-  /* PHILANTHROPY */
-  .philanthropy {
-    background: white;
-  }
+  /* INSURANCE & IRA */
+  .insurance-section { margin-top: 60px; padding-top: 60px; border-top: 1px solid var(--border); }
 
-  .phil-inner {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 60px;
-    align-items: center;
-  }
+  .insurance-plans-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin-bottom: 32px; }
 
-  .phil-quote {
-    font-size: 22px;
-    font-style: italic;
-    color: var(--navy);
-    line-height: 1.6;
-    border-left: 4px solid var(--red);
-    padding-left: 24px;
-    margin-bottom: 28px;
-  }
+  .insurance-plan-card { background: white; border: 1px solid var(--border); border-radius: 12px; padding: 22px; border-top: 4px solid var(--navy); }
+  .insurance-plan-card.highlighted { border-top-color: var(--red); box-shadow: 0 4px 20px rgba(192,39,45,0.1); }
 
-  .phil-text p {
-    font-size: 16px;
-    color: var(--text-muted);
-    line-height: 1.8;
-    margin-bottom: 16px;
-  }
+  .plan-name { font-size: 13px; font-weight: 700; color: var(--navy); margin-bottom: 4px; line-height: 1.3; }
+  .plan-employee-cost { font-size: 26px; font-weight: 800; color: var(--red); line-height: 1; margin-bottom: 2px; }
+  .plan-cost-label { font-size: 11px; color: var(--text-muted); margin-bottom: 14px; }
 
-  .phil-highlights {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-  }
+  .plan-details { display: flex; flex-direction: column; gap: 0; }
+  .plan-detail-row { display: flex; justify-content: space-between; font-size: 12px; padding: 5px 0; border-bottom: 1px solid #f0ece6; }
+  .plan-detail-row:last-child { border-bottom: none; }
+  .plan-detail-row span:first-child { color: var(--text-muted); }
+  .plan-detail-row span:last-child { font-weight: 600; color: var(--navy); }
 
-  .phil-item {
-    display: flex;
-    gap: 16px;
-    align-items: flex-start;
-    padding: 18px 20px;
-    background: var(--cream);
-    border-radius: 10px;
-    border-left: 3px solid var(--red);
-  }
+  .addons-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin-top: 16px; }
+  .addon-card { background: white; border: 1px solid var(--border); border-radius: 10px; padding: 18px 20px; display: flex; gap: 14px; align-items: center; }
+  .addon-icon { font-size: 24px; flex-shrink: 0; }
+  .addon-card h4 { font-size: 14px; font-weight: 700; color: var(--navy); margin-bottom: 2px; }
+  .addon-card p { font-size: 13px; color: var(--text-muted); }
+  .addon-cost { font-size: 16px; font-weight: 800; color: var(--red); }
 
+  .ira-card { background: linear-gradient(135deg, var(--navy) 0%, #2d4a7a 100%); border-radius: 14px; padding: 36px; display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; margin-top: 60px; }
+  .ira-card h3 { font-size: 26px; font-weight: 800; color: white; margin-bottom: 12px; }
+  .ira-card p { font-size: 15px; color: rgba(255,255,255,0.75); line-height: 1.7; margin-bottom: 12px; }
+  .ira-stats { display: flex; flex-direction: column; gap: 16px; }
+  .ira-stat { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.15); border-radius: 10px; padding: 18px 20px; }
+  .ira-stat .ira-num { font-size: 32px; font-weight: 800; color: var(--gold); line-height: 1; margin-bottom: 4px; }
+  .ira-stat .ira-label { font-size: 13px; color: rgba(255,255,255,0.7); font-weight: 500; }
+
+  .philanthropy { background: white; }
+  .phil-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+  .phil-quote { font-size: 22px; font-style: italic; color: var(--navy); line-height: 1.6; border-left: 4px solid var(--red); padding-left: 24px; margin-bottom: 28px; }
+  .phil-text p { font-size: 16px; color: var(--text-muted); line-height: 1.8; margin-bottom: 16px; }
+  .phil-highlights { display: flex; flex-direction: column; gap: 16px; }
+  .phil-item { display: flex; gap: 16px; align-items: flex-start; padding: 18px 20px; background: var(--cream); border-radius: 10px; border-left: 3px solid var(--red); }
   .phil-item-icon { font-size: 24px; flex-shrink: 0; }
-
   .phil-item h4 { font-size: 15px; font-weight: 700; color: var(--navy); margin-bottom: 4px; }
   .phil-item p { font-size: 13px; color: var(--text-muted); line-height: 1.5; }
 
-  /* JOBS */
-  .jobs {
-    background: var(--cream);
-  }
-
-  .jobs-intro {
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 20px;
-    margin-bottom: 40px;
-  }
-
-  .job-cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-    gap: 20px;
-  }
-
-  .job-card {
-    background: white;
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 24px;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    transition: box-shadow 0.2s, transform 0.2s;
-    text-decoration: none;
-    color: inherit;
-  }
-
+  .jobs { background: var(--cream); }
+  .jobs-intro { display: flex; align-items: flex-end; justify-content: space-between; flex-wrap: wrap; gap: 20px; margin-bottom: 40px; }
+  .job-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 20px; }
+  .job-card { background: white; border: 1px solid var(--border); border-radius: 12px; padding: 24px; display: flex; flex-direction: column; gap: 12px; transition: box-shadow 0.2s, transform 0.2s; text-decoration: none; color: inherit; }
   .job-card:hover { box-shadow: 0 8px 28px rgba(0,0,0,0.1); transform: translateY(-2px); }
-
-  .job-card-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 10px;
-  }
-
+  .job-card-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 10px; }
   .job-title { font-size: 17px; font-weight: 700; color: var(--navy); }
-
-  .job-type {
-    font-size: 11px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    padding: 3px 10px;
-    border-radius: 20px;
-    white-space: nowrap;
-    flex-shrink: 0;
-  }
-
+  .job-type { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; padding: 3px 10px; border-radius: 20px; white-space: nowrap; flex-shrink: 0; }
   .type-ft { background: #DCFCE7; color: #166534; }
   .type-pt { background: #EFF6FF; color: #1D4ED8; }
   .type-mgmt { background: #FEF9C3; color: #854D0E; }
-
-  .job-location {
-    font-size: 13px;
-    color: var(--text-muted);
-    display: flex;
-    align-items: center;
-    gap: 4px;
-  }
-
-  .job-desc {
-    font-size: 14px;
-    color: var(--text-muted);
-    line-height: 1.5;
-    flex: 1;
-  }
-
-  .job-apply {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    background: var(--red);
-    color: white;
-    font-size: 13px;
-    font-weight: 700;
-    padding: 9px 16px;
-    border-radius: 6px;
-    text-decoration: none;
-    transition: background 0.2s;
-    width: fit-content;
-    margin-top: 4px;
-  }
-
+  .job-location { font-size: 13px; color: var(--text-muted); display: flex; align-items: center; gap: 4px; }
+  .job-desc { font-size: 14px; color: var(--text-muted); line-height: 1.5; flex: 1; }
+  .job-apply { display: inline-flex; align-items: center; gap: 6px; background: var(--red); color: white; font-size: 13px; font-weight: 700; padding: 9px 16px; border-radius: 6px; text-decoration: none; transition: background 0.2s; width: fit-content; margin-top: 4px; }
   .job-apply:hover { background: var(--red-dark); }
-
-  .harri-note {
-    margin-top: 36px;
-    padding: 20px 24px;
-    background: white;
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    font-size: 14px;
-    color: var(--text-muted);
-  }
-
+  .harri-note { margin-top: 36px; padding: 20px 24px; background: white; border: 1px solid var(--border); border-radius: 10px; display: flex; align-items: center; gap: 16px; font-size: 14px; color: var(--text-muted); }
   .harri-note strong { color: var(--navy); }
 
-  /* FOOTER */
-  footer {
-    background: var(--navy);
-    color: rgba(255,255,255,0.65);
-    padding: 48px 5%;
-    text-align: center;
-  }
-
-  footer .footer-brand {
-    font-size: 20px;
-    font-weight: 800;
-    color: white;
-    margin-bottom: 8px;
-  }
-
+  footer { background: var(--navy); color: rgba(255,255,255,0.65); padding: 48px 5%; text-align: center; }
+  footer .footer-brand { font-size: 20px; font-weight: 800; color: white; margin-bottom: 8px; }
   footer .footer-brand span { color: var(--gold); }
-
   footer p { font-size: 14px; margin-bottom: 6px; }
-
-  footer .footer-links {
-    margin-top: 20px;
-    display: flex;
-    justify-content: center;
-    gap: 24px;
-    flex-wrap: wrap;
-  }
-
-  footer .footer-links a {
-    color: rgba(255,255,255,0.5);
-    text-decoration: none;
-    font-size: 13px;
-    transition: color 0.2s;
-  }
-
+  footer .footer-links { margin-top: 20px; display: flex; justify-content: center; gap: 24px; flex-wrap: wrap; }
+  footer .footer-links a { color: rgba(255,255,255,0.5); text-decoration: none; font-size: 13px; transition: color 0.2s; }
   footer .footer-links a:hover { color: white; }
+  footer .divider { height: 1px; background: rgba(255,255,255,0.1); margin: 28px 0; }
 
-  footer .divider {
-    height: 1px;
-    background: rgba(255,255,255,0.1);
-    margin: 28px 0;
-  }
+  .loc-tab { background: white; border: 1px solid var(--border); color: var(--text-muted); font-size: 13px; font-weight: 600; padding: 7px 16px; border-radius: 20px; cursor: pointer; transition: all 0.2s; }
+  .loc-tab:hover { border-color: var(--red); color: var(--red); }
+  .loc-tab.active { background: var(--red); border-color: var(--red); color: white; }
 
   @media (max-width: 768px) {
-    .hero-inner, .who-grid, .phil-inner { grid-template-columns: 1fr; gap: 36px; }
+    .hero-inner, .who-grid, .phil-inner, .ira-card { grid-template-columns: 1fr; gap: 36px; }
     .hero-stats { grid-template-columns: repeat(3, 1fr); gap: 10px; }
     .nav-links { display: none; }
-    .path-steps::before { display: none; }
   }
 </style>
 </head>
@@ -722,22 +241,10 @@
       </div>
     </div>
     <div class="hero-stats">
-      <div class="hero-stat">
-        <span class="num">8</span>
-        <span class="label">Locations</span>
-      </div>
-      <div class="hero-stat">
-        <span class="num">5</span>
-        <span class="label">Career Levels</span>
-      </div>
-      <div class="hero-stat">
-        <span class="num">Since<br>1956</span>
-        <span class="label">JM's Heritage</span>
-      </div>
-      <div class="hero-stat">
-        <span class="num">20+</span>
-        <span class="label">Stores Vision</span>
-      </div>
+      <div class="hero-stat"><span class="num">8</span><span class="label">Locations</span></div>
+      <div class="hero-stat"><span class="num">5</span><span class="label">Career Levels</span></div>
+      <div class="hero-stat"><span class="num">Since<br>1956</span><span class="label">JM's Heritage</span></div>
+      <div class="hero-stat"><span class="num">20+</span><span class="label">Stores Vision</span></div>
     </div>
   </div>
 </section>
@@ -771,38 +278,16 @@
       <div>
         <p class="section-eyebrow">Our founding values</p>
         <div class="values-grid" style="grid-template-columns: 1fr 1fr;">
-          <div class="value-card">
-            <div class="value-icon">🤲</div>
-            <h3>Humility</h3>
-            <p>Serve others with the same care whether you're in training or running a store.</p>
-          </div>
-          <div class="value-card">
-            <div class="value-icon">💪</div>
-            <h3>Commitment</h3>
-            <p>Show up on time, know the menu, stay positive, and give every shift your best.</p>
-          </div>
-          <div class="value-card">
-            <div class="value-icon">😊</div>
-            <h3>Kindness</h3>
-            <p>Offer a friendly smile, help without being asked, and encourage those around you.</p>
-          </div>
-          <div class="value-card">
-            <div class="value-icon">🤝</div>
-            <h3>Loyalty</h3>
-            <p>Devote your energy to your team, your store, and every customer you serve.</p>
-          </div>
-          <div class="value-card" style="grid-column: 1 / -1;">
-            <div class="value-icon">🎯</div>
-            <h3>Purpose</h3>
-            <p>Be humble, committed, kind, and loyal — and you'll build a foundation of real purpose. That purpose makes you great, which serves others with greatness. <em>Become a Legend.</em></p>
-          </div>
+          <div class="value-card"><div class="value-icon">🤲</div><h3>Humility</h3><p>Serve others with the same care whether you're in training or running a store.</p></div>
+          <div class="value-card"><div class="value-icon">💪</div><h3>Commitment</h3><p>Show up on time, know the menu, stay positive, and give every shift your best.</p></div>
+          <div class="value-card"><div class="value-icon">😊</div><h3>Kindness</h3><p>Offer a friendly smile, help without being asked, and encourage those around you.</p></div>
+          <div class="value-card"><div class="value-icon">🤝</div><h3>Loyalty</h3><p>Devote your energy to your team, your store, and every customer you serve.</p></div>
+          <div class="value-card" style="grid-column: 1 / -1;"><div class="value-icon">🎯</div><h3>Purpose</h3><p>Be humble, committed, kind, and loyal — and you'll build a foundation of real purpose. That purpose makes you great, which serves others with greatness. <em>Become a Legend.</em></p></div>
         </div>
       </div>
     </div>
   </div>
 </section>
-
-
 
 <!-- BENEFITS & BONUSES -->
 <section class="benefits" id="benefits">
@@ -826,7 +311,7 @@
             <div style="background: var(--cream); border-radius: 8px; padding: 16px; border-left: 3px solid var(--navy);">
               <div style="font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--navy); margin-bottom: 6px;">Phase 2 · Leadership Training</div>
               <div style="font-weight: 700; color: var(--navy); margin-bottom: 6px;">Culture &amp; Leadership</div>
-              <p style="font-size: 13px; color: var(--text-muted); line-height: 1.5;">Jersey Mike's corporate leadership program focused on coaching, communication, team development, decision-making, financial fundamentals, and building a high-performing store culture. Historically held in Point Pleasant, NJ — a full leadership and culture immersion.</p>
+              <p style="font-size: 13px; color: var(--text-muted); line-height: 1.5;">Jersey Mike's corporate leadership program focused on coaching, communication, team development, decision-making, financial fundamentals, and building a high-performing store culture. Historically held in Point Pleasant, NJ.</p>
             </div>
             <div style="background: var(--cream); border-radius: 8px; padding: 16px; border-left: 3px solid var(--gold);">
               <div style="font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: #b37d00; margin-bottom: 6px;">Phase 3 · +$1 Raise</div>
@@ -836,71 +321,91 @@
           </div>
         </div>
       </div>
-      <div class="benefit-card">
-        <div class="benefit-icon">🗓️</div>
-        <div>
-          <h3>Quarterly Cash Bonuses</h3>
-          <p>Full-time team members who hit their hours and maintain strong attendance earn $250 every quarter.</p>
-        </div>
-      </div>
-      <div class="benefit-card">
-        <div class="benefit-icon">🏆</div>
-        <div>
-          <h3>33 Bonus Award</h3>
-          <p>One outstanding team member per quarter earns $330 and company-wide recognition for embodying our values.</p>
-        </div>
-      </div>
-      <div class="benefit-card">
-        <div class="benefit-icon">🌟</div>
-        <div>
-          <h3>Living Legend Award</h3>
-          <p>Awarded annually to the employee with the most hours and fewest absences — a trophy, dinner, and legendary status.</p>
-        </div>
-      </div>
-      <div class="benefit-card">
-        <div class="benefit-icon">🚀</div>
-        <div>
-          <h3>Clear Career Ladder</h3>
-          <p>A structured path from Crew Member all the way to Director of Operations, with defined timelines at each level.</p>
-        </div>
-      </div>
-      <div class="benefit-card">
-        <div class="benefit-icon">❤️</div>
-        <div>
-          <h3>Culture of Recognition</h3>
-          <p>Winners are celebrated in GroupMe and our company newsletter — your hard work gets seen across the whole organization.</p>
-        </div>
-      </div>
+      <div class="benefit-card"><div class="benefit-icon">🗓️</div><div><h3>Quarterly Cash Bonuses</h3><p>Full-time team members who hit their hours and maintain strong attendance earn $250 every quarter.</p></div></div>
+      <div class="benefit-card"><div class="benefit-icon">🏆</div><div><h3>33 Bonus Award</h3><p>One outstanding team member per quarter earns $330 and company-wide recognition for embodying our values.</p></div></div>
+      <div class="benefit-card"><div class="benefit-icon">🌟</div><div><h3>Living Legend Award</h3><p>Awarded annually to the employee with the most hours and fewest absences — a trophy, dinner, and legendary status.</p></div></div>
+      <div class="benefit-card"><div class="benefit-icon">❤️</div><div><h3>Culture of Recognition</h3><p>Winners are celebrated in GroupMe and our company newsletter — your hard work gets seen across the whole organization.</p></div></div>
     </div>
 
+    <!-- CAREER LADDER -->
+    <p class="section-eyebrow">Career Growth</p>
+    <h3 style="font-size: 28px; font-weight: 800; color: var(--navy); margin-bottom: 12px;">From Crew to Operations Director</h3>
+    <p style="font-size: 16px; color: var(--text-muted); max-width: 680px; line-height: 1.7; margin-bottom: 32px;">Every Legend starts somewhere. Our career path is clearly defined, performance-driven, and built to take you as far as you're willing to go.</p>
+
+    <div style="display: flex; flex-direction: column; gap: 0; margin-bottom: 50px; position: relative;">
+
+      <!-- connecting line -->
+      <div style="position: absolute; left: 27px; top: 52px; bottom: 52px; width: 2px; background: linear-gradient(to bottom, var(--red), var(--gold)); z-index: 0;"></div>
+
+      <!-- Step 1 -->
+      <div style="display: flex; gap: 20px; align-items: flex-start; padding: 20px 0; position: relative; z-index: 1;">
+        <div style="min-width: 56px; height: 56px; border-radius: 50%; background: var(--red); color: white; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 13px; flex-shrink: 0; border: 3px solid white; box-shadow: 0 0 0 2px var(--red);">CM</div>
+        <div style="background: white; border: 1px solid var(--border); border-radius: 12px; padding: 20px 24px; flex: 1;">
+          <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-bottom: 8px;">
+            <span style="font-size: 16px; font-weight: 800; color: var(--navy);">Crew Member → Shift Leader</span>
+            <span style="font-size: 11px; font-weight: 700; background: #FEF2F2; color: var(--red); padding: 3px 10px; border-radius: 20px; text-transform: uppercase; letter-spacing: 0.5px;">0–2 Months</span>
+          </div>
+          <p style="font-size: 14px; color: var(--text-muted); line-height: 1.7;">Master core stations, customer service, and opening/closing procedures. Complete Phase 1 and 3 certifications while learning to lead shifts and support managers.</p>
+        </div>
+      </div>
+
+      <!-- Step 2 -->
+      <div style="display: flex; gap: 20px; align-items: flex-start; padding: 20px 0; position: relative; z-index: 1;">
+        <div style="min-width: 56px; height: 56px; border-radius: 50%; background: #C2410C; color: white; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 13px; flex-shrink: 0; border: 3px solid white; box-shadow: 0 0 0 2px #C2410C;">SL</div>
+        <div style="background: white; border: 1px solid var(--border); border-radius: 12px; padding: 20px 24px; flex: 1;">
+          <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-bottom: 8px;">
+            <span style="font-size: 16px; font-weight: 800; color: var(--navy);">Shift Leader → Manager in Training</span>
+            <span style="font-size: 11px; font-weight: 700; background: #FFF7ED; color: #C2410C; padding: 3px 10px; border-radius: 20px; text-transform: uppercase; letter-spacing: 0.5px;">2–6 Months</span>
+          </div>
+          <p style="font-size: 14px; color: var(--text-muted); line-height: 1.7;">Take ownership of store operations, staffing, and training. Drive catering and community growth while learning P&amp;L fundamentals. Develop confidence and leadership readiness for full store management.</p>
+        </div>
+      </div>
+
+      <!-- Step 3 -->
+      <div style="display: flex; gap: 20px; align-items: flex-start; padding: 20px 0; position: relative; z-index: 1;">
+        <div style="min-width: 56px; height: 56px; border-radius: 50%; background: #15803D; color: white; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 13px; flex-shrink: 0; border: 3px solid white; box-shadow: 0 0 0 2px #15803D;">MIT</div>
+        <div style="background: white; border: 1px solid var(--border); border-radius: 12px; padding: 20px 24px; flex: 1;">
+          <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-bottom: 8px;">
+            <span style="font-size: 16px; font-weight: 800; color: var(--navy);">Manager in Training → General Manager</span>
+            <span style="font-size: 11px; font-weight: 700; background: #F0FDF4; color: #15803D; padding: 3px 10px; border-radius: 20px; text-transform: uppercase; letter-spacing: 0.5px;">3–8 Months</span>
+          </div>
+          <p style="font-size: 14px; color: var(--text-muted); line-height: 1.7;">Oversee all store operations — sales, people, and guest experience. Hire and train future leaders, build community partnerships, and live out the 7 Principles in daily leadership.</p>
+        </div>
+      </div>
+
+      <!-- Step 4 -->
+      <div style="display: flex; gap: 20px; align-items: flex-start; padding: 20px 0; position: relative; z-index: 1;">
+        <div style="min-width: 56px; height: 56px; border-radius: 50%; background: #4338CA; color: white; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 13px; flex-shrink: 0; border: 3px solid white; box-shadow: 0 0 0 2px #4338CA;">GM</div>
+        <div style="background: white; border: 1px solid var(--border); border-radius: 12px; padding: 20px 24px; flex: 1;">
+          <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-bottom: 8px;">
+            <span style="font-size: 16px; font-weight: 800; color: var(--navy);">General Manager → District Manager</span>
+            <span style="font-size: 11px; font-weight: 700; background: #EEF2FF; color: #4338CA; padding: 3px 10px; border-radius: 20px; text-transform: uppercase; letter-spacing: 0.5px;">2+ Years</span>
+          </div>
+          <p style="font-size: 14px; color: var(--text-muted); line-height: 1.7;">Lead multiple stores, develop GMs and MITs, and expand catering and community initiatives. Work with the executive team to support regional growth and consistency.</p>
+        </div>
+      </div>
+
+      <!-- Step 5 -->
+      <div style="display: flex; gap: 20px; align-items: flex-start; padding: 20px 0; position: relative; z-index: 1;">
+        <div style="min-width: 56px; height: 56px; border-radius: 50%; background: var(--gold); color: var(--navy); display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 13px; flex-shrink: 0; border: 3px solid white; box-shadow: 0 0 0 2px var(--gold);">DM</div>
+        <div style="background: var(--navy); border-radius: 12px; padding: 20px 24px; flex: 1;">
+          <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-bottom: 8px;">
+            <span style="font-size: 16px; font-weight: 800; color: white;">District Manager → Director of Operations</span>
+            <span style="font-size: 11px; font-weight: 700; background: rgba(232,160,32,0.2); color: var(--gold); padding: 3px 10px; border-radius: 20px; text-transform: uppercase; letter-spacing: 0.5px; border: 1px solid rgba(232,160,32,0.4);">3+ Years</span>
+          </div>
+          <p style="font-size: 14px; color: rgba(255,255,255,0.75); line-height: 1.7;">Provide strategic leadership across markets, open new stores, and mentor the next generation of leaders. Help drive our vision toward 20+ thriving stores across Northern New England.</p>
+        </div>
+      </div>
+
+    </div>
 
     <p class="section-eyebrow">Bonus breakdown</p>
     <h3 style="font-size: 24px; font-weight: 700; color: var(--navy); margin-bottom: 30px;">What you can earn</h3>
     <div class="bonuses-grid">
-      <div class="bonus-card training">
-        <span class="bonus-tag">Training</span>
-        <div class="bonus-amount">+$2</div>
-        <h3>Phase 1 &amp; 3 Raises</h3>
-        <p>Earn $1 after Phase 1 (store operations) and another $1 after Phase 3 (advanced management). Phase 2 is Jersey Mike's corporate leadership program — coaching, culture, team development, and business fundamentals.</p>
-      </div>
-      <div class="bonus-card quarterly">
-        <span class="bonus-tag">Quarterly</span>
-        <div class="bonus-amount">$250</div>
-        <h3>Dependability Bonus</h3>
-        <p>Full-time employees who work 390+ hours per quarter (30 hrs/week) with zero absences earn this cash bonus.</p>
-      </div>
-      <div class="bonus-card elite">
-        <span class="bonus-tag">Elite Award</span>
-        <div class="bonus-amount">$330</div>
-        <h3>The 33 Bonus</h3>
-        <p>Nominated by your manager, selected by leadership. One winner per quarter across all stores. Recognized company-wide.</p>
-      </div>
-      <div class="bonus-card legend">
-        <span class="bonus-tag">Annual</span>
-        <div class="bonus-amount">🏆</div>
-        <h3>Living Legend</h3>
-        <p>The most hours. The fewest absences. A trophy and a dinner to celebrate the most dedicated person on our team.</p>
-      </div>
+      <div class="bonus-card training"><span class="bonus-tag">Training</span><div class="bonus-amount">+$2</div><h3>Phase 1 &amp; 3 Raises</h3><p>Earn $1 after Phase 1 (store operations) and another $1 after Phase 3 (advanced management). Phase 2 is Jersey Mike's corporate leadership program — coaching, culture, team development, and business fundamentals.</p></div>
+      <div class="bonus-card quarterly"><span class="bonus-tag">Quarterly</span><div class="bonus-amount">$250</div><h3>Dependability Bonus</h3><p>Full-time employees who work 390+ hours per quarter (30 hrs/week) with zero absences earn this cash bonus.</p></div>
+      <div class="bonus-card elite"><span class="bonus-tag">Elite Award</span><div class="bonus-amount">$330</div><h3>The 33 Bonus</h3><p>Nominated by your manager, selected by leadership. One winner per quarter across all stores. Recognized company-wide.</p></div>
+      <div class="bonus-card legend"><span class="bonus-tag">Annual</span><div class="bonus-amount">🏆</div><h3>Living Legend</h3><p>The most hours. The fewest absences. A trophy and a dinner to celebrate the most dedicated person on our team.</p></div>
     </div>
 
     <p class="section-eyebrow" style="margin-top: 60px;">Manager-in-Training Program</p>
@@ -908,85 +413,33 @@
     <p style="font-size: 16px; color: var(--text-muted); max-width: 680px; line-height: 1.7; margin-bottom: 32px;">Once you've shown strong leadership, reliability, and operational mastery, you may be selected for our Manager-in-Training program — an advanced 8-week development track designed to prepare you to lead your own store.</p>
 
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-bottom: 32px;">
-      <div style="background: #EEF2FF; border: 1px solid #C7D2FE; border-radius: 12px; padding: 20px; text-align: center;">
-        <div style="font-size: 32px; font-weight: 800; color: #4338CA;">45</div>
-        <div style="font-size: 13px; color: #4338CA; font-weight: 600;">Hours per week</div>
-        <div style="font-size: 12px; color: #6366F1; margin-top: 4px;">Opening, midday &amp; closing</div>
-      </div>
-      <div style="background: #FFF7ED; border: 1px solid #FED7AA; border-radius: 12px; padding: 20px; text-align: center;">
-        <div style="font-size: 32px; font-weight: 800; color: #C2410C;">8</div>
-        <div style="font-size: 13px; color: #C2410C; font-weight: 600;">Week program</div>
-        <div style="font-size: 12px; color: #EA580C; margin-top: 4px;">5 checkpoints, 2 weeks each</div>
-      </div>
-      <div style="background: #F0FDF4; border: 1px solid #BBF7D0; border-radius: 12px; padding: 20px; text-align: center;">
-        <div style="font-size: 32px; font-weight: 800; color: #15803D;">Bi-<br>weekly</div>
-        <div style="font-size: 13px; color: #15803D; font-weight: 600;">Check-in sessions</div>
-        <div style="font-size: 12px; color: #16A34A; margin-top: 4px;">Google Meet with District Manager</div>
-      </div>
-      <div style="background: #FEF2F2; border: 1px solid #FECACA; border-radius: 12px; padding: 20px; text-align: center;">
-        <div style="font-size: 13px; font-weight: 700; color: var(--red); margin-bottom: 6px;">Oversight by</div>
-        <div style="font-size: 14px; font-weight: 700; color: var(--navy);">District Manager</div>
-        <div style="font-size: 12px; color: var(--text-muted); margin-top: 4px;">&amp; Training Store Manager</div>
-      </div>
+      <div style="background: #EEF2FF; border: 1px solid #C7D2FE; border-radius: 12px; padding: 20px; text-align: center;"><div style="font-size: 32px; font-weight: 800; color: #4338CA;">45</div><div style="font-size: 13px; color: #4338CA; font-weight: 600;">Hours per week</div><div style="font-size: 12px; color: #6366F1; margin-top: 4px;">Opening, midday &amp; closing</div></div>
+      <div style="background: #FFF7ED; border: 1px solid #FED7AA; border-radius: 12px; padding: 20px; text-align: center;"><div style="font-size: 32px; font-weight: 800; color: #C2410C;">8</div><div style="font-size: 13px; color: #C2410C; font-weight: 600;">Week program</div><div style="font-size: 12px; color: #EA580C; margin-top: 4px;">5 checkpoints, 2 weeks each</div></div>
+      <div style="background: #F0FDF4; border: 1px solid #BBF7D0; border-radius: 12px; padding: 20px; text-align: center;"><div style="font-size: 32px; font-weight: 800; color: #15803D;">Bi-<br>weekly</div><div style="font-size: 13px; color: #15803D; font-weight: 600;">Check-in sessions</div><div style="font-size: 12px; color: #16A34A; margin-top: 4px;">Google Meet with District Manager</div></div>
+      <div style="background: #FEF2F2; border: 1px solid #FECACA; border-radius: 12px; padding: 20px; text-align: center;"><div style="font-size: 13px; font-weight: 700; color: var(--red); margin-bottom: 6px;">Oversight by</div><div style="font-size: 14px; font-weight: 700; color: var(--navy);">District Manager</div><div style="font-size: 12px; color: var(--text-muted); margin-top: 4px;">&amp; Training Store Manager</div></div>
     </div>
 
     <div style="display: flex; flex-direction: column; gap: 16px; margin-bottom: 40px;">
-
       <div style="display: flex; gap: 20px; align-items: flex-start; background: white; border: 1px solid var(--border); border-radius: 12px; padding: 22px 24px;">
         <div style="min-width: 52px; height: 52px; border-radius: 50%; background: var(--navy); color: white; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 14px; text-align: center; line-height: 1.2; flex-shrink: 0;">CP<br>1</div>
-        <div>
-          <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-bottom: 6px;">
-            <span style="font-size: 16px; font-weight: 700; color: var(--navy);">Checkpoint 1 — Leadership &amp; Operations</span>
-            <span style="font-size: 11px; font-weight: 700; background: #EEF2FF; color: #3730A3; padding: 3px 10px; border-radius: 20px; text-transform: uppercase; letter-spacing: 0.5px;">Weeks 1–2</span>
-          </div>
-          <p style="font-size: 14px; color: var(--text-muted); line-height: 1.6;">Run the store without oversight, delegate effectively, coach in the moment, manage prep levels, and execute efficient shifts while organizing catering.</p>
-        </div>
+        <div><div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-bottom: 6px;"><span style="font-size: 16px; font-weight: 700; color: var(--navy);">Checkpoint 1 — Leadership &amp; Operations</span><span style="font-size: 11px; font-weight: 700; background: #EEF2FF; color: #3730A3; padding: 3px 10px; border-radius: 20px; text-transform: uppercase; letter-spacing: 0.5px;">Weeks 1–2</span></div><p style="font-size: 14px; color: var(--text-muted); line-height: 1.6;">Run the store without oversight, delegate effectively, coach in the moment, manage prep levels, and execute efficient shifts while organizing catering.</p></div>
       </div>
-
       <div style="display: flex; gap: 20px; align-items: flex-start; background: white; border: 1px solid var(--border); border-radius: 12px; padding: 22px 24px;">
         <div style="min-width: 52px; height: 52px; border-radius: 50%; background: var(--red); color: white; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 14px; text-align: center; line-height: 1.2; flex-shrink: 0;">CP<br>2</div>
-        <div>
-          <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-bottom: 6px;">
-            <span style="font-size: 16px; font-weight: 700; color: var(--navy);">Checkpoint 2 — Numbers &amp; Systems</span>
-            <span style="font-size: 11px; font-weight: 700; background: #FEF2F2; color: #991B1B; padding: 3px 10px; border-radius: 20px; text-transform: uppercase; letter-spacing: 0.5px;">Weeks 3–4</span>
-          </div>
-          <p style="font-size: 14px; color: var(--text-muted); line-height: 1.6;">Understand labor, food cost, and P&amp;L; take ownership of ordering, invoices, inventory, and key platforms (Flexepos, Crunchtime, Harri, etc.).</p>
-        </div>
+        <div><div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-bottom: 6px;"><span style="font-size: 16px; font-weight: 700; color: var(--navy);">Checkpoint 2 — Numbers &amp; Systems</span><span style="font-size: 11px; font-weight: 700; background: #FEF2F2; color: #991B1B; padding: 3px 10px; border-radius: 20px; text-transform: uppercase; letter-spacing: 0.5px;">Weeks 3–4</span></div><p style="font-size: 14px; color: var(--text-muted); line-height: 1.6;">Understand labor, food cost, and P&amp;L; take ownership of ordering, invoices, inventory, and key platforms (Flexepos, Crunchtime, Harri, etc.).</p></div>
       </div>
-
       <div style="display: flex; gap: 20px; align-items: flex-start; background: white; border: 1px solid var(--border); border-radius: 12px; padding: 22px 24px;">
         <div style="min-width: 52px; height: 52px; border-radius: 50%; background: #C2410C; color: white; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 14px; text-align: center; line-height: 1.2; flex-shrink: 0;">CP<br>3</div>
-        <div>
-          <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-bottom: 6px;">
-            <span style="font-size: 16px; font-weight: 700; color: var(--navy);">Checkpoint 3 — Details &amp; Culture</span>
-            <span style="font-size: 11px; font-weight: 700; background: #FFF7ED; color: #92400E; padding: 3px 10px; border-radius: 20px; text-transform: uppercase; letter-spacing: 0.5px;">Weeks 5–6</span>
-          </div>
-          <p style="font-size: 14px; color: var(--text-muted); line-height: 1.6;">Control waste and portioning, execute POFs, drive grassroots efforts, engage the community, and lead from the front with strong presence and energy.</p>
-        </div>
+        <div><div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-bottom: 6px;"><span style="font-size: 16px; font-weight: 700; color: var(--navy);">Checkpoint 3 — Details &amp; Culture</span><span style="font-size: 11px; font-weight: 700; background: #FFF7ED; color: #92400E; padding: 3px 10px; border-radius: 20px; text-transform: uppercase; letter-spacing: 0.5px;">Weeks 5–6</span></div><p style="font-size: 14px; color: var(--text-muted); line-height: 1.6;">Control waste and portioning, execute POFs, drive grassroots efforts, engage the community, and lead from the front with strong presence and energy.</p></div>
       </div>
-
       <div style="display: flex; gap: 20px; align-items: flex-start; background: white; border: 1px solid var(--border); border-radius: 12px; padding: 22px 24px;">
         <div style="min-width: 52px; height: 52px; border-radius: 50%; background: #15803D; color: white; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 14px; text-align: center; line-height: 1.2; flex-shrink: 0;">CP<br>4</div>
-        <div>
-          <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-bottom: 6px;">
-            <span style="font-size: 16px; font-weight: 700; color: var(--navy);">Checkpoint 4 — Ownership &amp; Leadership</span>
-            <span style="font-size: 11px; font-weight: 700; background: #F0FDF4; color: #166534; padding: 3px 10px; border-radius: 20px; text-transform: uppercase; letter-spacing: 0.5px;">Weeks 7–8</span>
-          </div>
-          <p style="font-size: 14px; color: var(--text-muted); line-height: 1.6;">Own scheduling, forecasting, accountability, and training (Phase 1 &amp; 3); develop shift leads and lead weekly training plans.</p>
-        </div>
+        <div><div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-bottom: 6px;"><span style="font-size: 16px; font-weight: 700; color: var(--navy);">Checkpoint 4 — Ownership &amp; Leadership</span><span style="font-size: 11px; font-weight: 700; background: #F0FDF4; color: #166534; padding: 3px 10px; border-radius: 20px; text-transform: uppercase; letter-spacing: 0.5px;">Weeks 7–8</span></div><p style="font-size: 14px; color: var(--text-muted); line-height: 1.6;">Own scheduling, forecasting, accountability, and training (Phase 1 &amp; 3); develop shift leads and lead weekly training plans.</p></div>
       </div>
-
       <div style="display: flex; gap: 20px; align-items: flex-start; background: var(--navy); border-radius: 12px; padding: 22px 24px;">
         <div style="min-width: 52px; height: 52px; border-radius: 50%; background: var(--gold); color: var(--navy); display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 14px; text-align: center; line-height: 1.2; flex-shrink: 0;">CP<br>5</div>
-        <div>
-          <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-bottom: 6px;">
-            <span style="font-size: 16px; font-weight: 700; color: white;">Checkpoint 5 — Acting Manager</span>
-            <span style="font-size: 11px; font-weight: 700; background: rgba(232,160,32,0.2); color: var(--gold); padding: 3px 10px; border-radius: 20px; text-transform: uppercase; letter-spacing: 0.5px; border: 1px solid rgba(232,160,32,0.4);">Final Stage</span>
-          </div>
-          <p style="font-size: 14px; color: rgba(255,255,255,0.7); line-height: 1.6;">Run the store independently, lead interviews, oversee Zenput and comment cards, manage food cost, train leaders, and handle higher-level responsibilities like ordering and bank runs.</p>
-        </div>
+        <div><div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-bottom: 6px;"><span style="font-size: 16px; font-weight: 700; color: white;">Checkpoint 5 — Acting Manager</span><span style="font-size: 11px; font-weight: 700; background: rgba(232,160,32,0.2); color: var(--gold); padding: 3px 10px; border-radius: 20px; text-transform: uppercase; letter-spacing: 0.5px; border: 1px solid rgba(232,160,32,0.4);">Final Stage</span></div><p style="font-size: 14px; color: rgba(255,255,255,0.7); line-height: 1.6;">Run the store independently, lead interviews, oversee Zenput and comment cards, manage food cost, train leaders, and handle higher-level responsibilities like ordering and bank runs.</p></div>
       </div>
-
     </div>
 
     <div style="background: linear-gradient(135deg, var(--navy) 0%, #2d4a7a 100%); border-radius: 14px; padding: 32px; display: flex; gap: 24px; align-items: flex-start; margin-bottom: 50px;">
@@ -1002,29 +455,11 @@
     <h3 style="font-size: 28px; font-weight: 800; color: var(--navy); margin-bottom: 12px;">What managers earn</h3>
     <p style="font-size: 16px; color: var(--text-muted); max-width: 680px; line-height: 1.7; margin-bottom: 32px;">Management positions at Legend Subs come with a competitive salary, meaningful performance bonuses, and a year-end incentive tied directly to how well your store grows.</p>
 
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; margin-bottom: 40px;">
-
-      <div style="background: var(--navy); border-radius: 14px; padding: 30px;">
-        <div style="font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); margin-bottom: 14px;">Base Salary</div>
-        <div style="font-size: 44px; font-weight: 800; color: white; line-height: 1; margin-bottom: 6px;">$55K–$65K</div>
-        <div style="font-size: 14px; color: rgba(255,255,255,0.6); margin-bottom: 16px;">Starting annual salary</div>
-        <div style="border-top: 1px solid rgba(255,255,255,0.15); padding-top: 16px; font-size: 14px; color: rgba(255,255,255,0.75); line-height: 1.6;">Competitive base pay from day one, with growth tied to performance, store results, and leadership development.</div>
-      </div>
-
-      <div style="background: #FFF7ED; border: 1px solid #FED7AA; border-radius: 14px; padding: 30px;">
-        <div style="font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #C2410C; margin-bottom: 14px;">Monthly Performance Bonus</div>
-        <div style="font-size: 44px; font-weight: 800; color: #C2410C; line-height: 1; margin-bottom: 6px;">Up to<br>$1,500</div>
-        <div style="font-size: 14px; color: #92400E; margin-bottom: 16px;">Per month</div>
-        <div style="border-top: 1px solid #FED7AA; padding-top: 16px; font-size: 14px; color: #78350F; line-height: 1.6;">Earn up to $1,500 every month based on store performance. The stronger your store runs, the more you take home — every single month.</div>
-      </div>
-
-      <div style="background: #F0FDF4; border: 1px solid #BBF7D0; border-radius: 14px; padding: 30px;">
-        <div style="font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #15803D; margin-bottom: 14px;">Year-End Sales Bonus</div>
-        <div style="font-size: 44px; font-weight: 800; color: #15803D; line-height: 1; margin-bottom: 6px;">Tiered</div>
-        <div style="font-size: 14px; color: #166534; margin-bottom: 16px;">Based on annual sales growth</div>
-        <div style="border-top: 1px solid #BBF7D0; padding-top: 16px; font-size: 14px; color: #14532D; line-height: 1.6;">Hit your sales targets and earn a tiered end-of-year bonus. The more your store grows year over year, the bigger your reward at the end of the year.</div>
-      </div>
-
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; margin-bottom: 40px;">
+      <div style="background: var(--navy); border-radius: 14px; padding: 30px;"><div style="font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); margin-bottom: 14px;">Base Salary</div><div style="font-size: 44px; font-weight: 800; color: white; line-height: 1; margin-bottom: 6px;">$55K–$65K</div><div style="font-size: 14px; color: rgba(255,255,255,0.6); margin-bottom: 16px;">Starting annual salary</div><div style="border-top: 1px solid rgba(255,255,255,0.15); padding-top: 16px; font-size: 14px; color: rgba(255,255,255,0.75); line-height: 1.6;">Competitive base pay from day one, with growth tied to performance, store results, and leadership development.</div></div>
+      <div style="background: #FFF7ED; border: 1px solid #FED7AA; border-radius: 14px; padding: 30px;"><div style="font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #C2410C; margin-bottom: 14px;">Monthly Performance Bonus</div><div style="font-size: 44px; font-weight: 800; color: #C2410C; line-height: 1; margin-bottom: 6px;">Up to<br>$1,500</div><div style="font-size: 14px; color: #92400E; margin-bottom: 16px;">Per month</div><div style="border-top: 1px solid #FED7AA; padding-top: 16px; font-size: 14px; color: #78350F; line-height: 1.6;">Earn up to $1,500 every month based on store performance. The stronger your store runs, the more you take home — every single month.</div></div>
+      <div style="background: #F0FDF4; border: 1px solid #BBF7D0; border-radius: 14px; padding: 30px;"><div style="font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #15803D; margin-bottom: 14px;">Year-End Sales Bonus</div><div style="font-size: 28px; font-weight: 800; color: #15803D; line-height: 1.1; margin-bottom: 14px;">Up to $10,000</div><div style="border-top: 1px solid #BBF7D0; padding-top: 14px; display: flex; flex-direction: column; gap: 7px;"><div style="display: flex; justify-content: space-between; font-size: 13px;"><span style="color: #166534;">+5% YOY growth</span><span style="font-weight: 700; color: #15803D;">$2,500</span></div><div style="display: flex; justify-content: space-between; font-size: 13px;"><span style="color: #166534;">+10% YOY growth</span><span style="font-weight: 700; color: #15803D;">$5,000</span></div><div style="display: flex; justify-content: space-between; font-size: 13px;"><span style="color: #166534;">+15% YOY growth</span><span style="font-weight: 700; color: #15803D;">$7,500</span></div><div style="display: flex; justify-content: space-between; font-size: 13px;"><span style="color: #166534;">+20% YOY growth</span><span style="font-weight: 700; color: #15803D;">$10,000</span></div></div></div>
+      <div style="background: #EEF2FF; border: 1px solid #C7D2FE; border-radius: 14px; padding: 30px;"><div style="font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #4338CA; margin-bottom: 14px;">New Store / Takeover Bonus</div><div style="font-size: 44px; font-weight: 800; color: #4338CA; line-height: 1; margin-bottom: 6px;">+4%</div><div style="font-size: 14px; color: #3730A3; margin-bottom: 16px;">Base salary increase</div><div style="border-top: 1px solid #C7D2FE; padding-top: 16px; font-size: 14px; color: #312E81; line-height: 1.6;">GMs who open a new store or step into a store transition receive a 4% salary increase, effective from day one of the takeover.</div></div>
     </div>
 
     <div style="background: var(--cream); border: 1px solid var(--border); border-radius: 12px; padding: 24px 28px; display: flex; gap: 16px; align-items: flex-start; margin-bottom: 50px;">
@@ -1035,6 +470,100 @@
       </div>
     </div>
 
+    <!-- ====== MANAGER POLICIES — NEW ====== -->
+    <div style="margin-top: 60px; padding-top: 60px; border-top: 1px solid var(--border);">
+      <p class="section-eyebrow">Manager Policies</p>
+      <h3 style="font-size: 28px; font-weight: 800; color: var(--navy); margin-bottom: 12px;">Reliability &amp; attendance bonus</h3>
+      <p style="font-size: 16px; color: var(--text-muted); max-width: 680px; line-height: 1.7; margin-bottom: 36px;">Consistent, dependable managers earn additional paid time off each quarter — and those days don't count against labor.</p>
+
+      <!-- Reliability Bonus -->
+      <div style="background: white; border: 1px solid var(--border); border-radius: 14px; padding: 32px; margin-bottom: 24px;">
+        <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 24px;">
+          <div style="width: 48px; height: 48px; border-radius: 10px; background: #EFF6FF; display: flex; align-items: center; justify-content: center; font-size: 22px; flex-shrink: 0;">🗓️</div>
+          <div>
+            <div style="font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--red); margin-bottom: 4px;">Attendance &amp; Consistency</div>
+            <h4 style="font-size: 20px; font-weight: 800; color: var(--navy);">Manager Reliability Bonus</h4>
+          </div>
+        </div>
+        <p style="font-size: 14px; color: var(--text-muted); line-height: 1.7; margin-bottom: 24px;">Designed to reward consistency, accountability, and dependable leadership throughout the year. Reliable managers earn additional paid time off — and those days don't count against labor.</p>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin-bottom: 20px;">
+          <div style="background: #EFF6FF; border: 1px solid #BFDBFE; border-radius: 10px; padding: 20px;">
+            <div style="font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: #1D4ED8; margin-bottom: 10px;">Quarterly Eligibility</div>
+            <p style="font-size: 13px; color: #1E40AF; line-height: 1.6; margin-bottom: 10px;">To earn the quarterly reliability bonus, a manager must:</p>
+            <div style="display: flex; flex-direction: column; gap: 6px;">
+              <div style="display: flex; gap: 8px; align-items: flex-start; font-size: 13px; color: var(--navy);"><span style="color: #1D4ED8; font-weight: 700; flex-shrink: 0;">✓</span> Zero call-outs during the quarter</div>
+              <div style="display: flex; gap: 8px; align-items: flex-start; font-size: 13px; color: var(--navy);"><span style="color: #1D4ED8; font-weight: 700; flex-shrink: 0;">✓</span> Minimum 50 hours per week throughout the quarter</div>
+            </div>
+          </div>
+          <div style="background: #F0FDF4; border: 1px solid #BBF7D0; border-radius: 10px; padding: 20px;">
+            <div style="font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: #15803D; margin-bottom: 10px;">What You Earn</div>
+            <div style="font-size: 36px; font-weight: 800; color: #15803D; line-height: 1; margin-bottom: 4px;">1 Day</div>
+            <div style="font-size: 13px; color: #166534; margin-bottom: 10px;">per qualifying quarter · up to 4 days/year</div>
+            <p style="font-size: 13px; color: #14532D; line-height: 1.5;">Each vacation day = a 10-hour shift, added back into labor — so it does <strong>not</strong> negatively impact your labor percentage.</p>
+          </div>
+          <div style="background: #FFF7ED; border: 1px solid #FED7AA; border-radius: 10px; padding: 20px;">
+            <div style="font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: #C2410C; margin-bottom: 10px;">Rollover Policy</div>
+            <div style="display: flex; flex-direction: column; gap: 6px;">
+              <div style="font-size: 13px; color: #78350F; line-height: 1.5;">✓ Roll over quarter to quarter within the same year</div>
+              <div style="font-size: 13px; color: #78350F; line-height: 1.5;">✓ Q4 days may carry into Q1 of the following year</div>
+              <div style="font-size: 13px; color: var(--red); line-height: 1.5; font-weight: 600;">✗ Any unused days after Q1 are forfeited</div>
+            </div>
+          </div>
+        </div>
+
+        <div style="background: var(--cream); border: 1px solid var(--border); border-radius: 10px; padding: 16px 20px; font-size: 13px; color: var(--text-muted); display: flex; gap: 10px; align-items: flex-start;">
+          <span style="font-size: 18px; flex-shrink: 0;">💡</span>
+          <div><strong style="color: var(--navy);">Standard vacation (2 weeks)</strong> does count toward labor. Managers are responsible for planning coverage and staffing appropriately to stay within labor targets. Reliability bonus days do not.</div>
+        </div>
+      </div>
+
+    </div>
+    <!-- ====== END MANAGER POLICIES ====== -->
+
+    <!-- ====== FULL-TIME BENEFITS — NEW ====== -->
+    <div class="insurance-section">
+      <p class="section-eyebrow">Full-Time Employee Benefits</p>
+      <h3 style="font-size: 28px; font-weight: 800; color: var(--navy); margin-bottom: 12px;">Health, dental &amp; retirement</h3>
+      <p style="font-size: 16px; color: var(--text-muted); max-width: 680px; line-height: 1.7; margin-bottom: 36px;">Full-time team members at Legend Subs are eligible for a comprehensive benefits package including medical, dental, life insurance, and a company-matched retirement plan. Contact Alex Swett for full enrollment details.</p>
+
+      <div class="addons-row" style="margin-bottom: 32px;">
+        <div class="addon-card">
+          <span class="addon-icon">🏥</span>
+          <div>
+            <h4>Medical Insurance</h4>
+            <p>Anthem Blue Cross HMO coverage — multiple plan options available to fit your needs and budget.</p>
+          </div>
+        </div>
+        <div class="addon-card">
+          <span class="addon-icon">🦷</span>
+          <div>
+            <h4>Dental Insurance</h4>
+            <p>Dental coverage available for employees and families. Individual and family tiers offered.</p>
+          </div>
+        </div>
+        <div class="addon-card">
+          <span class="addon-icon">🛡️</span>
+          <div>
+            <h4>Life Insurance</h4>
+            <p>Company-sponsored life insurance included for eligible full-time employees.</p>
+          </div>
+        </div>
+        <div class="addon-card">
+          <span class="addon-icon">📈</span>
+          <div>
+            <h4>Simple IRA — 3% Match</h4>
+            <p>Legend Subs matches your retirement contributions dollar for dollar, up to 3% of your annual earnings. Tax-deferred through Fidelity.</p>
+          </div>
+        </div>
+      </div>
+
+      <div style="background: #EFF6FF; border: 1px solid #BFDBFE; border-radius: 10px; padding: 16px 20px; font-size: 13px; color: #1E40AF; display: flex; gap: 10px; align-items: flex-start;">
+        <span style="font-size: 18px; flex-shrink: 0;">ℹ️</span>
+        <div>For full plan details, contribution rates, and enrollment forms, reach out to your hiring manager.</div>
+      </div>
+    </div>
+    <!-- ====== END FULL-TIME BENEFITS ====== -->
 
   </div>
 </section>
@@ -1051,34 +580,10 @@
         <p>When you work at Legend Subs, you're part of a team that shows up for its neighbors the same way it shows up for its customers — with generosity, heart, and purpose.</p>
       </div>
       <div class="phil-highlights">
-        <div class="phil-item">
-          <span class="phil-item-icon">🍞</span>
-          <div>
-            <h4>Jersey Mike's Month of Giving</h4>
-            <p>An annual campaign where participating locations donate 100% of one day's sales to local charities chosen by each franchise.</p>
-          </div>
-        </div>
-        <div class="phil-item">
-          <span class="phil-item-icon">🤝</span>
-          <div>
-            <h4>Community Partnerships</h4>
-            <p>Our GMs and MITs are trained to build local relationships and bring the brand into the communities we operate in.</p>
-          </div>
-        </div>
-        <div class="phil-item">
-          <span class="phil-item-icon">🌱</span>
-          <div>
-            <h4>Service-First Culture</h4>
-            <p>Our core value is to be in service of others — to customers, teammates, and neighbors. Philanthropy isn't an event; it's who we are.</p>
-          </div>
-        </div>
-        <div class="phil-item">
-          <span class="phil-item-icon">🏘️</span>
-          <div>
-            <h4>Growing Northern New England</h4>
-            <p>With a vision of 20+ stores, Legend Subs is investing in jobs, leaders, and communities across MA and NH.</p>
-          </div>
-        </div>
+        <div class="phil-item"><span class="phil-item-icon">🍞</span><div><h4>Jersey Mike's Month of Giving</h4><p>An annual campaign where participating locations donate 100% of one day's sales to local charities chosen by each franchise.</p></div></div>
+        <div class="phil-item"><span class="phil-item-icon">🤝</span><div><h4>Community Partnerships</h4><p>Our GMs and MITs are trained to build local relationships and bring the brand into the communities we operate in.</p></div></div>
+        <div class="phil-item"><span class="phil-item-icon">🌱</span><div><h4>Service-First Culture</h4><p>Our core value is to be in service of others — to customers, teammates, and neighbors. Philanthropy isn't an event; it's who we are.</p></div></div>
+        <div class="phil-item"><span class="phil-item-icon">🏘️</span><div><h4>Growing Northern New England</h4><p>With a vision of 20+ stores, Legend Subs is investing in jobs, leaders, and communities across MA and NH.</p></div></div>
       </div>
     </div>
   </div>
@@ -1095,7 +600,6 @@
       </div>
     </div>
 
-    <!-- Location tabs -->
     <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 32px;" id="location-tabs">
       <button onclick="filterLocation('all')" class="loc-tab active" data-loc="all">All Locations</button>
       <button onclick="filterLocation('chelmsford')" class="loc-tab" data-loc="chelmsford">Chelmsford, MA</button>
@@ -1109,273 +613,43 @@
     </div>
 
     <div class="job-cards" id="job-listings">
-
-      <!-- CHELMSFORD -->
-      <a href="https://harri.com/16059-Jersey-Mikes-Chelmsford-Bdn9MUGGq6PL/job/2693304-fast-track-to-general-manager-start-at-21-hr/apply/2693304" target="_blank" class="job-card" data-loc="chelmsford">
-        <div class="job-card-header">
-          <span class="job-title">Fast Track to General Manager</span>
-          <span class="job-type type-mgmt">Full-Time</span>
-        </div>
-        <span class="job-location">📍 113 Drum Hill Rd, Chelmsford, MA · Start at $21/hr</span>
-        <p class="job-desc">Accelerated path to GM. Lead a store, build your team, and unlock salary. Structured mentorship the whole way.</p>
-        <span class="job-apply">Apply Now ↗</span>
-      </a>
-
-      <a href="https://harri.com/16059-Jersey-Mikes-Chelmsford-Bdn9MUGGq6PL/job/2504637-hiring-new-store-opening-chelmsford-ma-21-hr-all-in/apply/2504637" target="_blank" class="job-card" data-loc="chelmsford">
-        <div class="job-card-header">
-          <span class="job-title">Crew Member — New Store Opening</span>
-          <span class="job-type type-pt">Part/Full-Time</span>
-        </div>
-        <span class="job-location">📍 113 Drum Hill Rd, Chelmsford, MA · $21/hr all in</span>
-        <p class="job-desc">Be part of the ground floor of our newest Chelmsford location. Earn training raises as you master Phase 1 & 3 certifications.</p>
-        <span class="job-apply">Apply Now ↗</span>
-      </a>
-
-      <!-- METHUEN -->
-      <a href="https://harri.com/JM16033/job/2693295-fast-track-to-general-manager-start-at-21-hr/apply/2693295" target="_blank" class="job-card" data-loc="methuen">
-        <div class="job-card-header">
-          <span class="job-title">Fast Track to General Manager</span>
-          <span class="job-type type-mgmt">Full-Time</span>
-        </div>
-        <span class="job-location">📍 90 Pleasant Valley St, Methuen, MA · Start at $21/hr</span>
-        <p class="job-desc">Accelerated path to GM with salary unlock. Own your store, hire your team, and live out the 7 Principles in daily leadership.</p>
-        <span class="job-apply">Apply Now ↗</span>
-      </a>
-
-      <a href="https://harri.com/JM16033/job/2137220-shift-leader/apply/2137220" target="_blank" class="job-card" data-loc="methuen">
-        <div class="job-card-header">
-          <span class="job-title">Shift Leader</span>
-          <span class="job-type type-ft">Part/Full-Time</span>
-        </div>
-        <span class="job-location">📍 90 Pleasant Valley St, Methuen, MA</span>
-        <p class="job-desc">Lead daily operations, support crew members, and own the shift experience. Step one on your path to Manager in Training.</p>
-        <span class="job-apply">Apply Now ↗</span>
-      </a>
-
-      <!-- EXETER -->
-      <a href="https://harri.com/JM-37003/job/2596706-fast-track-to-general-manager-start-at-22-hr-unlock-salary/apply/2596706" target="_blank" class="job-card" data-loc="exeter">
-        <div class="job-card-header">
-          <span class="job-title">Fast Track to General Manager</span>
-          <span class="job-type type-mgmt">Full-Time</span>
-        </div>
-        <span class="job-location">📍 141 Portsmouth Ave, Exeter, NH · Start at $22/hr + salary unlock</span>
-        <p class="job-desc">Grow into full store leadership — sales, staffing, and guest experience. Work with ownership to expand our NH footprint.</p>
-        <span class="job-apply">Apply Now ↗</span>
-      </a>
-
-      <a href="https://harri.com/JM-37003/job/2226928-crew-member/apply/2226928" target="_blank" class="job-card" data-loc="exeter">
-        <div class="job-card-header">
-          <span class="job-title">Crew Member</span>
-          <span class="job-type type-pt">Part/Full-Time</span>
-        </div>
-        <span class="job-location">📍 141 Portsmouth Ave, Exeter, NH</span>
-        <p class="job-desc">Join our Exeter team. Learn core stations and earn raises with Phase 1 & 3 training certifications.</p>
-        <span class="job-apply">Apply Now ↗</span>
-      </a>
-
-      <a href="https://harri.com/JM-37003/job/2137178-shift-leader/apply/2137178" target="_blank" class="job-card" data-loc="exeter">
-        <div class="job-card-header">
-          <span class="job-title">Shift Leader</span>
-          <span class="job-type type-ft">Part/Full-Time</span>
-        </div>
-        <span class="job-location">📍 141 Portsmouth Ave, Exeter, NH</span>
-        <p class="job-desc">Take ownership of your shift, support your team, and build toward the next level on our growth path.</p>
-        <span class="job-apply">Apply Now ↗</span>
-      </a>
-
-      <!-- SEABROOK -->
-      <a href="https://harri.com/JM-37005/job/2596734-fast-track-to-general-manager-start-at-22-hr-unlock-salary/apply/2596734" target="_blank" class="job-card" data-loc="seabrook">
-        <div class="job-card-header">
-          <span class="job-title">Fast Track to General Manager</span>
-          <span class="job-type type-mgmt">Full-Time</span>
-        </div>
-        <span class="job-location">📍 652 Lafayette Rd, Seabrook, NH · Start at $22/hr + salary unlock</span>
-        <p class="job-desc">Lead the Seabrook store — build community, drive catering, and grow into a multi-unit leadership role.</p>
-        <span class="job-apply">Apply Now ↗</span>
-      </a>
-
-      <a href="https://harri.com/JM-37005/job/2137211-crew-member/apply/2137211" target="_blank" class="job-card" data-loc="seabrook">
-        <div class="job-card-header">
-          <span class="job-title">Crew Member</span>
-          <span class="job-type type-pt">Part/Full-Time</span>
-        </div>
-        <span class="job-location">📍 652 Lafayette Rd, Seabrook, NH</span>
-        <p class="job-desc">Start your Legend Subs journey. Earn automatic pay raises as you complete your training certifications.</p>
-        <span class="job-apply">Apply Now ↗</span>
-      </a>
-
-      <a href="https://harri.com/JM-37005/job/2117076-shift-leader/apply/2117076" target="_blank" class="job-card" data-loc="seabrook">
-        <div class="job-card-header">
-          <span class="job-title">Shift Leader</span>
-          <span class="job-type type-ft">Part/Full-Time</span>
-        </div>
-        <span class="job-location">📍 652 Lafayette Rd, Seabrook, NH</span>
-        <p class="job-desc">Lead shifts and support your team at our Seabrook location. A great step toward Manager in Training.</p>
-        <span class="job-apply">Apply Now ↗</span>
-      </a>
-
-      <!-- LONDONDERRY -->
-      <a href="https://harri.com/JM37008/job/2717430-fast-track-to-general-manager-start-at-21-hr-unlock-salary/apply/2717430" target="_blank" class="job-card" data-loc="londonderry">
-        <div class="job-card-header">
-          <span class="job-title">Fast Track to General Manager</span>
-          <span class="job-type type-mgmt">Full-Time</span>
-        </div>
-        <span class="job-location">📍 4 Orchard View Dr, Londonderry, NH · Start at $21/hr + salary unlock</span>
-        <p class="job-desc">Drive operations, hire leaders, and grow into District Manager territory. Full mentorship from ownership.</p>
-        <span class="job-apply">Apply Now ↗</span>
-      </a>
-
-      <a href="https://harri.com/JM37008/job/1985406-crew-member/apply/1985406" target="_blank" class="job-card" data-loc="londonderry">
-        <div class="job-card-header">
-          <span class="job-title">Crew Member</span>
-          <span class="job-type type-pt">Part/Full-Time</span>
-        </div>
-        <span class="job-location">📍 4 Orchard View Dr, Londonderry, NH</span>
-        <p class="job-desc">Join our Londonderry team and begin your career path. Training raises, quarterly bonuses, and a culture that invests in you.</p>
-        <span class="job-apply">Apply Now ↗</span>
-      </a>
-
-      <a href="https://harri.com/JM37008/job/2137192-shift-leader/apply/2137192" target="_blank" class="job-card" data-loc="londonderry">
-        <div class="job-card-header">
-          <span class="job-title">Shift Leader</span>
-          <span class="job-type type-ft">Part/Full-Time</span>
-        </div>
-        <span class="job-location">📍 4 Orchard View Dr, Londonderry, NH</span>
-        <p class="job-desc">Run the floor, mentor crew, and build your leadership skills at Londonderry.</p>
-        <span class="job-apply">Apply Now ↗</span>
-      </a>
-
-      <!-- PORTSMOUTH -->
-      <a href="https://harri.com/JM37011/job/2721396-fast-track-to-general-manager-start-at-21-hr-unlock-salary/apply/2721396" target="_blank" class="job-card" data-loc="portsmouth">
-        <div class="job-card-header">
-          <span class="job-title">Fast Track to General Manager</span>
-          <span class="job-type type-mgmt">Full-Time</span>
-        </div>
-        <span class="job-location">📍 1600 Woodbury Ave, Portsmouth, NH · Start at $21/hr + salary unlock</span>
-        <p class="job-desc">Step into store leadership at Portsmouth with full support from our executive team. Grow toward District Manager.</p>
-        <span class="job-apply">Apply Now ↗</span>
-      </a>
-
-      <a href="https://harri.com/JM37011/job/1999483-crew-member-21-hr-all-in/apply/1999483" target="_blank" class="job-card" data-loc="portsmouth">
-        <div class="job-card-header">
-          <span class="job-title">Crew Member</span>
-          <span class="job-type type-pt">Part/Full-Time</span>
-        </div>
-        <span class="job-location">📍 1600 Woodbury Ave, Portsmouth, NH · $21/hr all in</span>
-        <p class="job-desc">Join the Portsmouth team. Earn great pay from day one with raises built in as you grow through certifications.</p>
-        <span class="job-apply">Apply Now ↗</span>
-      </a>
-
-      <a href="https://harri.com/JM37011/job/2137201-shift-leader-21-hr-all-in/apply/2137201" target="_blank" class="job-card" data-loc="portsmouth">
-        <div class="job-card-header">
-          <span class="job-title">Shift Leader</span>
-          <span class="job-type type-ft">Part/Full-Time</span>
-        </div>
-        <span class="job-location">📍 1600 Woodbury Ave, Portsmouth, NH · $21/hr all in</span>
-        <p class="job-desc">Lead shifts and develop your leadership skills at our Portsmouth location on the path to MIT.</p>
-        <span class="job-apply">Apply Now ↗</span>
-      </a>
-
-      <!-- EPPING -->
-      <a href="https://harri.com/JM37015/job/2596732-fast-track-to-general-manager-start-at-22-hr-unlock-salary/apply/2596732" target="_blank" class="job-card" data-loc="epping">
-        <div class="job-card-header">
-          <span class="job-title">Fast Track to General Manager</span>
-          <span class="job-type type-mgmt">Full-Time</span>
-        </div>
-        <span class="job-location">📍 96 Calef Hwy, Epping, NH · Start at $22/hr + salary unlock</span>
-        <p class="job-desc">Take the GM fast track at Epping with competitive pay and a clear path to regional leadership.</p>
-        <span class="job-apply">Apply Now ↗</span>
-      </a>
-
-      <a href="https://harri.com/JM37015/job/1974035-crew-member-21-hour-all-in/apply/1974035" target="_blank" class="job-card" data-loc="epping">
-        <div class="job-card-header">
-          <span class="job-title">Crew Member</span>
-          <span class="job-type type-pt">Part/Full-Time</span>
-        </div>
-        <span class="job-location">📍 96 Calef Hwy, Epping, NH · $21/hr all in</span>
-        <p class="job-desc">Start building your career at Epping. Great pay, a supportive team, and a real path upward.</p>
-        <span class="job-apply">Apply Now ↗</span>
-      </a>
-
-      <a href="https://harri.com/JM37015/job/2137204-shift-leader-21-hr-all-in/apply/2137204" target="_blank" class="job-card" data-loc="epping">
-        <div class="job-card-header">
-          <span class="job-title">Shift Leader</span>
-          <span class="job-type type-ft">Part/Full-Time</span>
-        </div>
-        <span class="job-location">📍 96 Calef Hwy, Epping, NH · $21/hr all in</span>
-        <p class="job-desc">Lead your shift, coach crew, and take the next step toward management at our Epping store.</p>
-        <span class="job-apply">Apply Now ↗</span>
-      </a>
-
-      <!-- ROCHESTER -->
-      <a href="https://harri.com/JM-37018/job/2693310-fast-track-to-general-manager-start-at-21-hr/apply/2693310" target="_blank" class="job-card" data-loc="rochester">
-        <div class="job-card-header">
-          <span class="job-title">Fast Track to General Manager</span>
-          <span class="job-type type-mgmt">Full-Time</span>
-        </div>
-        <span class="job-location">📍 155 Market Place Blvd, Rochester, NH · Start at $21/hr</span>
-        <p class="job-desc">Lead Rochester toward excellence. Full path to GM and beyond with direct executive support.</p>
-        <span class="job-apply">Apply Now ↗</span>
-      </a>
-
-      <a href="https://harri.com/JM-37018/job/2255616-crew-member-21-hr-all-in/apply/2255616" target="_blank" class="job-card" data-loc="rochester">
-        <div class="job-card-header">
-          <span class="job-title">Crew Member</span>
-          <span class="job-type type-pt">Part/Full-Time</span>
-        </div>
-        <span class="job-location">📍 155 Market Place Blvd, Rochester, NH · $21/hr all in</span>
-        <p class="job-desc">Join the Rochester crew. Day-one competitive pay plus raises built into your training path.</p>
-        <span class="job-apply">Apply Now ↗</span>
-      </a>
-
-      <a href="https://harri.com/JM-37018/job/2255624-shift-leader-21-hr-all-in/apply/2255624" target="_blank" class="job-card" data-loc="rochester">
-        <div class="job-card-header">
-          <span class="job-title">Shift Leader</span>
-          <span class="job-type type-ft">Part/Full-Time</span>
-        </div>
-        <span class="job-location">📍 155 Market Place Blvd, Rochester, NH · $21/hr all in</span>
-        <p class="job-desc">Run the floor at Rochester and build the skills that take you to Manager in Training.</p>
-        <span class="job-apply">Apply Now ↗</span>
-      </a>
-
+      <a href="https://harri.com/16059-Jersey-Mikes-Chelmsford-Bdn9MUGGq6PL/job/2693304-fast-track-to-general-manager-start-at-21-hr/apply/2693304" target="_blank" class="job-card" data-loc="chelmsford"><div class="job-card-header"><span class="job-title">Fast Track to General Manager</span><span class="job-type type-mgmt">Full-Time</span></div><span class="job-location">📍 113 Drum Hill Rd, Chelmsford, MA · Start at $21/hr</span><p class="job-desc">Accelerated path to GM. Lead a store, build your team, and unlock salary. Structured mentorship the whole way.</p><span class="job-apply">Apply Now ↗</span></a>
+      <a href="https://harri.com/16059-Jersey-Mikes-Chelmsford-Bdn9MUGGq6PL/job/2504637-hiring-new-store-opening-chelmsford-ma-21-hr-all-in/apply/2504637" target="_blank" class="job-card" data-loc="chelmsford"><div class="job-card-header"><span class="job-title">Crew Member — New Store Opening</span><span class="job-type type-pt">Part/Full-Time</span></div><span class="job-location">📍 113 Drum Hill Rd, Chelmsford, MA · $21/hr all in</span><p class="job-desc">Be part of the ground floor of our newest Chelmsford location. Earn training raises as you master Phase 1 & 3 certifications.</p><span class="job-apply">Apply Now ↗</span></a>
+      <a href="https://harri.com/JM16033/job/2693295-fast-track-to-general-manager-start-at-21-hr/apply/2693295" target="_blank" class="job-card" data-loc="methuen"><div class="job-card-header"><span class="job-title">Fast Track to General Manager</span><span class="job-type type-mgmt">Full-Time</span></div><span class="job-location">📍 90 Pleasant Valley St, Methuen, MA · Start at $21/hr</span><p class="job-desc">Accelerated path to GM with salary unlock. Own your store, hire your team, and live out the 7 Principles in daily leadership.</p><span class="job-apply">Apply Now ↗</span></a>
+      <a href="https://harri.com/JM16033/job/2137220-shift-leader/apply/2137220" target="_blank" class="job-card" data-loc="methuen"><div class="job-card-header"><span class="job-title">Shift Leader</span><span class="job-type type-ft">Part/Full-Time</span></div><span class="job-location">📍 90 Pleasant Valley St, Methuen, MA</span><p class="job-desc">Lead daily operations, support crew members, and own the shift experience. Step one on your path to Manager in Training.</p><span class="job-apply">Apply Now ↗</span></a>
+      <a href="https://harri.com/JM-37003/job/2596706-fast-track-to-general-manager-start-at-22-hr-unlock-salary/apply/2596706" target="_blank" class="job-card" data-loc="exeter"><div class="job-card-header"><span class="job-title">Fast Track to General Manager</span><span class="job-type type-mgmt">Full-Time</span></div><span class="job-location">📍 141 Portsmouth Ave, Exeter, NH · Start at $22/hr + salary unlock</span><p class="job-desc">Grow into full store leadership — sales, staffing, and guest experience. Work with ownership to expand our NH footprint.</p><span class="job-apply">Apply Now ↗</span></a>
+      <a href="https://harri.com/JM-37003/job/2226928-crew-member/apply/2226928" target="_blank" class="job-card" data-loc="exeter"><div class="job-card-header"><span class="job-title">Crew Member</span><span class="job-type type-pt">Part/Full-Time</span></div><span class="job-location">📍 141 Portsmouth Ave, Exeter, NH</span><p class="job-desc">Join our Exeter team. Learn core stations and earn raises with Phase 1 & 3 training certifications.</p><span class="job-apply">Apply Now ↗</span></a>
+      <a href="https://harri.com/JM-37003/job/2137178-shift-leader/apply/2137178" target="_blank" class="job-card" data-loc="exeter"><div class="job-card-header"><span class="job-title">Shift Leader</span><span class="job-type type-ft">Part/Full-Time</span></div><span class="job-location">📍 141 Portsmouth Ave, Exeter, NH</span><p class="job-desc">Take ownership of your shift, support your team, and build toward the next level on our growth path.</p><span class="job-apply">Apply Now ↗</span></a>
+      <a href="https://harri.com/JM-37005/job/2596734-fast-track-to-general-manager-start-at-22-hr-unlock-salary/apply/2596734" target="_blank" class="job-card" data-loc="seabrook"><div class="job-card-header"><span class="job-title">Fast Track to General Manager</span><span class="job-type type-mgmt">Full-Time</span></div><span class="job-location">📍 652 Lafayette Rd, Seabrook, NH · Start at $22/hr + salary unlock</span><p class="job-desc">Lead the Seabrook store — build community, drive catering, and grow into a multi-unit leadership role.</p><span class="job-apply">Apply Now ↗</span></a>
+      <a href="https://harri.com/JM-37005/job/2137211-crew-member/apply/2137211" target="_blank" class="job-card" data-loc="seabrook"><div class="job-card-header"><span class="job-title">Crew Member</span><span class="job-type type-pt">Part/Full-Time</span></div><span class="job-location">📍 652 Lafayette Rd, Seabrook, NH</span><p class="job-desc">Start your Legend Subs journey. Earn automatic pay raises as you complete your training certifications.</p><span class="job-apply">Apply Now ↗</span></a>
+      <a href="https://harri.com/JM-37005/job/2117076-shift-leader/apply/2117076" target="_blank" class="job-card" data-loc="seabrook"><div class="job-card-header"><span class="job-title">Shift Leader</span><span class="job-type type-ft">Part/Full-Time</span></div><span class="job-location">📍 652 Lafayette Rd, Seabrook, NH</span><p class="job-desc">Lead shifts and support your team at our Seabrook location. A great step toward Manager in Training.</p><span class="job-apply">Apply Now ↗</span></a>
+      <a href="https://harri.com/JM37008/job/2717430-fast-track-to-general-manager-start-at-21-hr-unlock-salary/apply/2717430" target="_blank" class="job-card" data-loc="londonderry"><div class="job-card-header"><span class="job-title">Fast Track to General Manager</span><span class="job-type type-mgmt">Full-Time</span></div><span class="job-location">📍 4 Orchard View Dr, Londonderry, NH · Start at $21/hr + salary unlock</span><p class="job-desc">Drive operations, hire leaders, and grow into District Manager territory. Full mentorship from ownership.</p><span class="job-apply">Apply Now ↗</span></a>
+      <a href="https://harri.com/JM37008/job/1985406-crew-member/apply/1985406" target="_blank" class="job-card" data-loc="londonderry"><div class="job-card-header"><span class="job-title">Crew Member</span><span class="job-type type-pt">Part/Full-Time</span></div><span class="job-location">📍 4 Orchard View Dr, Londonderry, NH</span><p class="job-desc">Join our Londonderry team and begin your career path. Training raises, quarterly bonuses, and a culture that invests in you.</p><span class="job-apply">Apply Now ↗</span></a>
+      <a href="https://harri.com/JM37008/job/2137192-shift-leader/apply/2137192" target="_blank" class="job-card" data-loc="londonderry"><div class="job-card-header"><span class="job-title">Shift Leader</span><span class="job-type type-ft">Part/Full-Time</span></div><span class="job-location">📍 4 Orchard View Dr, Londonderry, NH</span><p class="job-desc">Run the floor, mentor crew, and build your leadership skills at Londonderry.</p><span class="job-apply">Apply Now ↗</span></a>
+      <a href="https://harri.com/JM37011/job/2721396-fast-track-to-general-manager-start-at-21-hr-unlock-salary/apply/2721396" target="_blank" class="job-card" data-loc="portsmouth"><div class="job-card-header"><span class="job-title">Fast Track to General Manager</span><span class="job-type type-mgmt">Full-Time</span></div><span class="job-location">📍 1600 Woodbury Ave, Portsmouth, NH · Start at $21/hr + salary unlock</span><p class="job-desc">Step into store leadership at Portsmouth with full support from our executive team. Grow toward District Manager.</p><span class="job-apply">Apply Now ↗</span></a>
+      <a href="https://harri.com/JM37011/job/1999483-crew-member-21-hr-all-in/apply/1999483" target="_blank" class="job-card" data-loc="portsmouth"><div class="job-card-header"><span class="job-title">Crew Member</span><span class="job-type type-pt">Part/Full-Time</span></div><span class="job-location">📍 1600 Woodbury Ave, Portsmouth, NH · $21/hr all in</span><p class="job-desc">Join the Portsmouth team. Earn great pay from day one with raises built in as you grow through certifications.</p><span class="job-apply">Apply Now ↗</span></a>
+      <a href="https://harri.com/JM37011/job/2137201-shift-leader-21-hr-all-in/apply/2137201" target="_blank" class="job-card" data-loc="portsmouth"><div class="job-card-header"><span class="job-title">Shift Leader</span><span class="job-type type-ft">Part/Full-Time</span></div><span class="job-location">📍 1600 Woodbury Ave, Portsmouth, NH · $21/hr all in</span><p class="job-desc">Lead shifts and develop your leadership skills at our Portsmouth location on the path to MIT.</p><span class="job-apply">Apply Now ↗</span></a>
+      <a href="https://harri.com/JM37015/job/2596732-fast-track-to-general-manager-start-at-22-hr-unlock-salary/apply/2596732" target="_blank" class="job-card" data-loc="epping"><div class="job-card-header"><span class="job-title">Fast Track to General Manager</span><span class="job-type type-mgmt">Full-Time</span></div><span class="job-location">📍 96 Calef Hwy, Epping, NH · Start at $22/hr + salary unlock</span><p class="job-desc">Take the GM fast track at Epping with competitive pay and a clear path to regional leadership.</p><span class="job-apply">Apply Now ↗</span></a>
+      <a href="https://harri.com/JM37015/job/1974035-crew-member-21-hour-all-in/apply/1974035" target="_blank" class="job-card" data-loc="epping"><div class="job-card-header"><span class="job-title">Crew Member</span><span class="job-type type-pt">Part/Full-Time</span></div><span class="job-location">📍 96 Calef Hwy, Epping, NH · $21/hr all in</span><p class="job-desc">Start building your career at Epping. Great pay, a supportive team, and a real path upward.</p><span class="job-apply">Apply Now ↗</span></a>
+      <a href="https://harri.com/JM37015/job/2137204-shift-leader-21-hr-all-in/apply/2137204" target="_blank" class="job-card" data-loc="epping"><div class="job-card-header"><span class="job-title">Shift Leader</span><span class="job-type type-ft">Part/Full-Time</span></div><span class="job-location">📍 96 Calef Hwy, Epping, NH · $21/hr all in</span><p class="job-desc">Lead your shift, coach crew, and take the next step toward management at our Epping store.</p><span class="job-apply">Apply Now ↗</span></a>
+      <a href="https://harri.com/JM-37018/job/2693310-fast-track-to-general-manager-start-at-21-hr/apply/2693310" target="_blank" class="job-card" data-loc="rochester"><div class="job-card-header"><span class="job-title">Fast Track to General Manager</span><span class="job-type type-mgmt">Full-Time</span></div><span class="job-location">📍 155 Market Place Blvd, Rochester, NH · Start at $21/hr</span><p class="job-desc">Lead Rochester toward excellence. Full path to GM and beyond with direct executive support.</p><span class="job-apply">Apply Now ↗</span></a>
+      <a href="https://harri.com/JM-37018/job/2255616-crew-member-21-hr-all-in/apply/2255616" target="_blank" class="job-card" data-loc="rochester"><div class="job-card-header"><span class="job-title">Crew Member</span><span class="job-type type-pt">Part/Full-Time</span></div><span class="job-location">📍 155 Market Place Blvd, Rochester, NH · $21/hr all in</span><p class="job-desc">Join the Rochester crew. Day-one competitive pay plus raises built into your training path.</p><span class="job-apply">Apply Now ↗</span></a>
+      <a href="https://harri.com/JM-37018/job/2255624-shift-leader-21-hr-all-in/apply/2255624" target="_blank" class="job-card" data-loc="rochester"><div class="job-card-header"><span class="job-title">Shift Leader</span><span class="job-type type-ft">Part/Full-Time</span></div><span class="job-location">📍 155 Market Place Blvd, Rochester, NH · $21/hr all in</span><p class="job-desc">Run the floor at Rochester and build the skills that take you to Manager in Training.</p><span class="job-apply">Apply Now ↗</span></a>
     </div>
 
     <div class="harri-note">
       <span style="font-size: 28px;">ℹ️</span>
-      <div>
-        <strong>All applications are processed through Harri.</strong> Click any listing above to view full details and apply directly. You can also walk into any of our 8 locations and apply in person.
-      </div>
+      <div><strong>All applications are processed through Harri.</strong> Click any listing above to view full details and apply directly. You can also walk into any of our 8 locations and apply in person.</div>
     </div>
   </div>
 </section>
-
-<style>
-.loc-tab {
-  background: white;
-  border: 1px solid var(--border);
-  color: var(--text-muted);
-  font-size: 13px;
-  font-weight: 600;
-  padding: 7px 16px;
-  border-radius: 20px;
-  cursor: pointer;
-  transition: all 0.2s;
-}
-.loc-tab:hover { border-color: var(--red); color: var(--red); }
-.loc-tab.active { background: var(--red); border-color: var(--red); color: white; }
-.job-card[style*="display: none"] { display: none !important; }
-</style>
 
 <script>
 function filterLocation(loc) {
   document.querySelectorAll('.loc-tab').forEach(t => t.classList.remove('active'));
   document.querySelector('[data-loc="' + loc + '"]').classList.add('active');
   document.querySelectorAll('#job-listings .job-card').forEach(card => {
-    if (loc === 'all' || card.dataset.loc === loc) {
-      card.style.display = 'flex';
-    } else {
-      card.style.display = 'none';
-    }
+    card.style.display = (loc === 'all' || card.dataset.loc === loc) ? 'flex' : 'none';
   });
 }
 </script>
